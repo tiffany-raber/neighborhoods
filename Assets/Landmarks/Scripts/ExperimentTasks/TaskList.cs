@@ -62,6 +62,8 @@ public class TaskList : ExperimentTask
     public TextMeshProUGUI overlayRepeatCount; // ignored if empty
     public TextMeshProUGUI overlayListItem; // ignored if empty
 
+    public Camera camera; 
+
     private new void Awake() {
         base.Awake();
     }
@@ -71,7 +73,6 @@ public class TaskList : ExperimentTask
         // Debug.Log(this.GetType().Name);
 
         TASK_START();
-
 
         if (!skip) startNextTask();
     }
